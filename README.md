@@ -107,25 +107,6 @@ ReShift/
 
 ## 📜 Changelog
 
-### [1.1.1] - Maintenance & Engine Upgrades
-
-#### 📦 Frida Engine & Binaries Upgrade
-- **Frida v17.18.0 Upgrade**:
-  - Updated bundled Magisk/KernelSU/APatch module binaries (`frida-server`, `frida-inject`, `frida-gadget.so`) from 17.16.4 to **17.18.0**.
-  - Synchronized embedded app assets (`app/src/main/assets/ReShift.zip`) to bundle Frida 17.18.0 natively for direct in-app module installations.
-  - Updated `module.prop` and version metadata.
-
-#### 📱 Launcher & Manifest Fixes
-- **Duplicate App Icon Fix**:
-  - Resolved double launcher icon issue when running `./gradlew installRelease`.
-  - Removed duplicate `LAUNCHER` intent filter from `MainActivity` in `AndroidManifest.xml`.
-  - Unified app launcher management exclusively through `.LauncherDefault` and `.LauncherMasked` activity aliases for stealth icon masking.
-
-#### 🤖 LLM Model Restoration Enhancements
-- **Enhanced GGUF Restoration Path Search**:
-  - Upgraded `restoreGgufModelsFromDownloads` in `SettingsViewModel.kt` to dynamically resolve `/Download` and `/Downloads` directories using official `Environment` APIs.
-  - Resolved Android Lint warning regarding hardcoded `/sdcard/` paths.
-
 ---
 
 ### [1.1.0] - Design System & Feature Overhaul
@@ -200,6 +181,20 @@ ReShift/
     - Execution mode selection (`Auto`, `Spawn (-f)`, `Attach (-n)`).
     - Adjustable injection delay slider (0 to 60 seconds).
     - Optional Cloud Static Analysis Validation.
+    - Upgraded `restoreGgufModelsFromDownloads` in `SettingsViewModel.kt` to dynamically resolve `/Download` and `/Downloads` directories using official `Environment` APIs.
+    - Resolved Android Lint warning regarding hardcoded `/sdcard/` paths.
+ 
+    - #### 📦 Frida Engine & Binaries Upgrade
+- **Frida v17.18.0 Upgrade**:
+  - Updated bundled Magisk/KernelSU/APatch module binaries (`frida-server`, `frida-inject`, `frida-gadget.so`) from 17.16.4 to **17.18.0**.
+  - Synchronized embedded app assets (`app/src/main/assets/ReShift.zip`) to bundle Frida 17.18.0 natively for direct in-app module installations.
+  - Updated `module.prop` and version metadata.
+
+#### 📱 Launcher & Manifest Fixes
+- **Duplicate App Icon Fix**:
+  - Resolved double launcher icon issue when running `./gradlew installRelease`.
+  - Removed duplicate `LAUNCHER` intent filter from `MainActivity` in `AndroidManifest.xml`.
+  - Unified app launcher management exclusively through `.LauncherDefault` and `.LauncherMasked` activity aliases for stealth icon masking.
 
 ---
 
