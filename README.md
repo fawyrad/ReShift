@@ -10,7 +10,7 @@
 
 ## Key Features & Capabilities
 
-### 🎮 IL2CPP Unity Inspector & Dumper
+### IL2CPP Unity Inspector & Dumper
 Deep reverse engineering suite for Unity Android games utilizing the IL2CPP scripting backend:
 - **Native Metadata Extraction**: Direct extraction of metadata from `libil2cpp.so` and `global-metadata.dat`.
 - **SQLite Database Engine (`il2cpp_dumper.db`)**: Persistent local SQLite caching of all parsed C# metadata for instant offline reloads and rapid search.
@@ -49,7 +49,7 @@ Integrated artificial intelligence for Frida script generation, closed-loop auto
 
 ---
 
-### 🥷 Anti-Detection & Stealth Suite
+### Anti-Detection & Stealth Suite
 Engineered to bypass modern anti-cheat and detection mechanisms:
 - **Dynamic Binary Renaming**: Automatically renames Frida binaries (e.g., `frida-server` ➔ `nm-service` / randomized names) to evade process name checks (`pgrep`, `/proc/self/cmdline`).
 - **Stealth Pathing**: Operates out of hidden, root-protected system directories (`/data/adb/modules/snakeloader_frida`).
@@ -65,7 +65,7 @@ Engineered to bypass modern anti-cheat and detection mechanisms:
 
 ---
 
-### 🔍 Research & Debugging Arsenal
+### Research & Debugging Arsenal
 - **Memory Inspector**: Browse, dump (hex/ASCII), and write to process memory in real-time with RPC hook management.
 - **Code Flow Stalker**: Instruction-level execution tracing, call hierarchy segment trees, and hot-path frequency analysis.
 - **Interactive Root Shell**: Live `su` terminal console for executing commands directly on the device.
@@ -105,7 +105,7 @@ ReShift/
 
 ---
 
-## 📜 Changelog
+## Changelog
 
 ---
 
