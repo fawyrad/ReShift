@@ -1,4 +1,4 @@
-# 🐍 ReShift
+# ReShift
 
 **ReShift** is an advanced, high-performance Android security research, dynamic analysis, and reverse engineering suite. It unites the power of **Frida**, **Zygisk**, **C++ JNI On-Device GGUF LLM inference** (`llama.cpp`), **SQLite IL2CPP Inspector**, and **anti-detection stealth mechanics** into a mobile-first Jetpack Compose Material 3 interface.
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Key Features & Capabilities
+## Key Features & Capabilities
 
 ### 🎮 IL2CPP Unity Inspector & Dumper
 Deep reverse engineering suite for Unity Android games utilizing the IL2CPP scripting backend:
@@ -29,7 +29,7 @@ Deep reverse engineering suite for Unity Android games utilizing the IL2CPP scri
 
 ---
 
-### 🤖 ReShift Autonomous AI Agent & LLM Router
+### ReShift Autonomous AI Agent & LLM Router
 Integrated artificial intelligence for Frida script generation, closed-loop auto-correction, and game modification:
 - **Multi-Provider LLM Router (`AdaptiveLlmRouter`)**:
   - **Gemini Cloud**: Integrates Google Gemini 3.6 Flash and 3.5 Flash Lite via `GeminiApiService`.
@@ -59,7 +59,7 @@ Engineered to bypass modern anti-cheat and detection mechanisms:
 
 ---
 
-### 🛠️ Dual-Engine Injection Architecture
+### Dual-Engine Injection Architecture
 - **Zygisk Loader**: Native C++ module (`zygisk/arm64-v8a.so`, `zygisk/armeabi-v7a.so`) that injects `frida-gadget.so` at process spawn before app `main()` execution.
 - **Frida Server / CLI**: Full support for standard Frida instrumentation with configurable binary execution strategies (`Auto`, `RPC (CLI)`, `Inject`, `Server`).
 
@@ -74,7 +74,7 @@ Engineered to bypass modern anti-cheat and detection mechanisms:
 
 ---
 
-### 📦 Ecosystem & Script Management
+### Ecosystem & Script Management
 - **GitHub & Frida CodeShare Browsers**: Search, preview, and download thousands of community scripts.
 - **ReShift Modules Asset Gallery**: Pre-bundled local asset script repository (`ReShiftModules`).
 - **Multi-Script Loader**: Concatenate and manage multiple active scripts per app with priority execution.
@@ -82,7 +82,7 @@ Engineered to bypass modern anti-cheat and detection mechanisms:
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 ReShift/
@@ -111,7 +111,7 @@ ReShift/
 
 ### [1.1.0] - Design System & Feature Overhaul
 
-#### 🎨 Unified Design System & UI/UX Redesign
+#### Unified Design System & UI/UX Redesign
 - **Design System Tokens (`ui/theme/` & `ui/components/CommonUI.kt`)**:
   - **Standardized Shape Tokens**: Established `ReShiftCardShape` (`16.dp`), `ReShiftDialogShape` (`20.dp`), `ReShiftButtonShape` (`12.dp`), `ReShiftChipShape` (`8.dp`), and `ReShiftBadgeShape` (`6.dp`).
   - **Semantic Color Tokens**: Added unified status colors in `Color.kt` (`SuccessGreen`, `ErrorRed`, `WarningOrange`, `InfoBlue`, `PurpleAccent`, `CyanAccent`).
@@ -125,7 +125,7 @@ ReShift/
   - Refactored all 17 screens and sub-screens (`StatusScreen`, `AppsScreen`, `ModulesScreen`, `LogsScreen`, `SettingsScreen`, `FridaToolboxScreen`, `Il2CppScreen`, `MemoryInspectorScreen`, `ZygiskSettingsScreen`, `StalkerToolboxScreen`, `AdvancedFridaScreen`, `AppDetailsScreen`, `ModuleDetailsScreen`, `ScriptEditorScreen`, `RepoBrowserScreen`, `CodeShareBrowserScreen`, `AssetBrowserScreen`).
   - Standardized all application dialogs (`AppUpdateDialog`, `CommunityDialog`, `AppPickerDialog`, `MemoryDumpDialog`, `MemoryWriteDialog`, etc.).
 
-#### 🎮 IL2CPP Inspector (Unity Game Reverse Engineering)
+#### IL2CPP Inspector (Unity Game Reverse Engineering)
 - **Metadata Dumping & SQLite Caching**:
   - Native dump extraction from `libil2cpp.so` and `global-metadata.dat`.
   - Automatic persistent SQLite caching in `il2cpp_dumper.db` for instant reloads and offline analysis.
@@ -155,7 +155,7 @@ ReShift/
 - **Export Capabilities**:
   - Export full metadata dumps as structured JSON or C# Header files (`.cs`).
 
-#### 🤖 ReShift Autonomous AI Agent & LLM Engine
+#### ReShift Autonomous AI Agent & LLM Engine
 - **Multi-Provider LLM Support**:
   - **Gemini Cloud**: Integrates Gemini 3.6 Flash and 3.5 Flash Lite via Google Gemini API.
   - **Ollama Server**: Connects to local/network Ollama instances (`http://127.0.0.1:11434` or PC IP).
@@ -184,13 +184,13 @@ ReShift/
     - Upgraded `restoreGgufModelsFromDownloads` in `SettingsViewModel.kt` to dynamically resolve `/Download` and `/Downloads` directories using official `Environment` APIs.
     - Resolved Android Lint warning regarding hardcoded `/sdcard/` paths.
  
-    - #### 📦 Frida Engine & Binaries Upgrade
+    - #### Frida Engine & Binaries Upgrade
 - **Frida v17.18.0 Upgrade**:
   - Updated bundled Magisk/KernelSU/APatch module binaries (`frida-server`, `frida-inject`, `frida-gadget.so`) from 17.16.4 to **17.18.0**.
   - Synchronized embedded app assets (`app/src/main/assets/ReShift.zip`) to bundle Frida 17.18.0 natively for direct in-app module installations.
   - Updated `module.prop` and version metadata.
 
-#### 📱 Launcher & Manifest Fixes
+#### Launcher & Manifest Fixes
 - **Duplicate App Icon Fix**:
   - Resolved double launcher icon issue when running `./gradlew installRelease`.
   - Removed duplicate `LAUNCHER` intent filter from `MainActivity` in `AndroidManifest.xml`.
@@ -198,7 +198,7 @@ ReShift/
 
 ---
 
-## 🚦 Getting Started
+## Getting Started
 
 1. **Prerequisites**: A rooted Android device running Magisk, KernelSU, or APatch.
 2. **Flash the ReShift Module**: Flash the `ReShift.zip` module via Magisk / KSU / APatch Manager.
